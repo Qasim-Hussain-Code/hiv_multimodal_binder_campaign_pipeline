@@ -1,0 +1,50 @@
+{
+ "S1_closed_apo__glycan_free": {
+  "protein_residues": 278,
+  "glycan_residues": 0,
+  "pdbqt_atoms": 2711,
+  "kb": 229
+ },
+ "S1_closed_apo__glycosylated": {
+  "protein_residues": 278,
+  "glycan_residues": 10,
+  "pdbqt_atoms": 2873,
+  "kb": 242
+ },
+ "S2_closed_holo__glycan_free": {
+  "protein_residues": 241,
+  "glycan_residues": 0,
+  "pdbqt_atoms": 2384,
+  "kb": 198
+ },
+ "S2_closed_holo__glycosylated": {
+  "protein_residues": 241,
+  "glycan_residues": 10,
+  "pdbqt_atoms": 2546,
+  "kb": 211
+ },
+ "S3_open_cd4__glycan_free": {
+  "protein_residues": 204,
+  "glycan_residues": 0,
+  "pdbqt_atoms": 1944,
+  "kb": 159
+ },
+ "S3_open_cd4__glycosylated": {
+  "protein_residues": 204,
+  "glycan_residues": 5,
+  "pdbqt_atoms": 2023,
+  "kb": 166
+ },
+ "S4_cd4_cladeCRF__glycan_free": {
+  "protein_residues": 200,
+  "glycan_residues": 0,
+  "pdbqt_atoms": 1944,
+  "kb": 160
+ },
+ "S4_cd4_cladeCRF__glycosylated": {
+  "protein_residues": 200,
+  "glycan_residues": 0,
+  "pdbqt_atoms": 1944,
+  "kb": 160
+ }
+}
