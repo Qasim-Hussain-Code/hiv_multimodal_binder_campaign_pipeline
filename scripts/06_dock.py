@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Stage 06 (driver). Dock every candidate into every state and glycan arm.
 
-Machinery. AutoDock Vina 1.2.7, default 'vina' scoring function, one box per
-state from config/boxes.json, exhaustiveness 8, one Vina seed for every run.
+Machinery. AutoDock Vina 1.2.7, default 'vina' scoring function, one 18 A cubic box per
+state from config/boxes.json, exhaustiveness 6, one Vina seed for every run.
 Preparation conventions (RDKit ETKDG embedding, MMFF relaxation, Meeko
 charges, receptor from Open Babel) follow stage 1, vina_gnina_pose_benchmark_pipeline
 at commit 313851a, which this repository does not vendor: the stage 1 code is
@@ -18,9 +18,13 @@ Controls. The script never reads labels.tsv. Temsavir and BMS-378806 sit in
 the candidate list under anonymous ids and go through the same functions as
 the null molecules. This is the point of the anchor argument.
 
-Exhaustiveness 8 is a compromise for 16 cores and a 12-hour window. Stage 1
-measured the cost of higher exhaustiveness for its own benchmark, not for an
-induced pocket, so no claim is made that 8 converges here.
+A first attempt used a 22 A box and exhaustiveness 8 and was stopped after 27
+dockings: ligands of 40 heavy atoms took 70 to 280 s each against 30 s for the
+small ones used in the ten-candidate timing, which projected to about 15 hours
+for the full set. The box was cut to 18 A and exhaustiveness to 6 to fit the
+time available. Both are compromises, and no claim is made that exhaustiveness
+6 converges in an induced pocket. Stage 1 measured the cost of exhaustiveness
+for its own benchmark, not for this pocket.
 """
 import argparse, json, os, subprocess, sys, time, csv, threading
 from concurrent.futures import ThreadPoolExecutor
@@ -33,8 +37,8 @@ from meeko import MoleculePreparation, PDBQTWriterLegacy
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 VINA = os.environ.get("VINA") or ("C:/vina/vina.exe.exe" if os.name == "nt" else "vina")
-BOX = 22.0
-EXH = 8
+BOX = 18.0
+EXH = 6
 VINA_SEED = 42
 EMBED_SEED = 42
 FIELDS = ["id", "state", "arm", "score", "heavy_atoms", "wall_s", "peak_rss_mb", "exhaustiveness", "seed"]
