@@ -53,3 +53,6 @@ tmp/
 # OS
 .DS_Store
 Thumbs.db
+project.conf
+logs/stamps/
+logs/*.timing
