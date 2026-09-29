@@ -1,0 +1,13 @@
+{
+ "env_annotated_molecules": 564,
+ "excluded": 491,
+ "candidates": 68,
+ "controls": 2,
+ "null": 98,
+ "null_pool": 3014,
+ "seed": 20260929,
+ "control_found_in_chembl_env": {
+  "temsavir_83J": true,
+  "BMS378806_83G": true
+ }
+}

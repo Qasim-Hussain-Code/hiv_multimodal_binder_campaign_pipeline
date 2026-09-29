@@ -1,0 +1,18 @@
+doc	decision	reason
+CHEMBL1126407	include	beta-lactam peptidomimetics reported as gp120-CD4 interaction inhibitors
+CHEMBL1151082	include	structure-directed gp120-CD4 binding inhibitor
+CHEMBL1641443	include	CD4-gp120 binding inhibitors from virtual screening
+CHEMBL4130629	include	temsavir discovery paper
+CHEMBL4321787	include	medicinal chemistry review, gp120 attachment inhibitor entries only
+CHEMBL4342492	include	CD4 mimetics
+CHEMBL4422649	include	soluble CD4 mimics
+CHEMBL4813943	include	CD4 mimic hybrids
+CHEMBL4828712	include	gp120 attachment inhibitor scaffold hopping
+CHEMBL5126520	include	review of gp120 binders
+CHEMBL5131454	include	soluble CD4 mimics
+CHEMBL5230138	include	CD4-mimetic entry inhibitors
+CHEMBL1151699	exclude	estrogen receptor coactivator paper, mis-annotated to an Env target in ChEMBL
+CHEMBL1201862	exclude	PubChem BioAssay deposit, 356 molecules of unrelated chemotypes, not Env-directed by title
+CHEMBL1240366	exclude	CXCR4 antagonist, host receptor not Env
+CHEMBL4325884	exclude	gp41 fusion inhibitors, a different site from the gp120 box used here
+CHEMBL5725587	exclude	imidazopyridines with no stated Env target, mis-annotated in ChEMBL to an Env target
