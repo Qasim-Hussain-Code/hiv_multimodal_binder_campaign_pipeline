@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-29",
+  "structures": {
+    "4TVP": {
+      "title": "Crystal Structure of the HIV-1 BG505 SOSIP.664 Env Trimer Ectodomain, Comprising Atomic-Level Definition of Pre-Fusion gp120 and gp41, in Complex with Human Antibodies PGT122 and 35O22",
+      "resolution_A": 3.1,
+      "deposited": "2014-06-27",
+      "method": "X-RAY DIFFRACTION",
+      "non_glycan_ligands": [
+        "NAG",
+        "SO4"
+      ],
+      "sha256": "f9d5087c18b8a2d1ba43ca2001c2e221aa3204b3be8b9badf1bdca645f68314d",
+      "mb": 0.64
+    },
+    "5U7O": {
+      "title": "Crystal Structure of HIV-1 BG505 SOSIP.664 Prefusion Env Trimer Bound to Small Molecule HIV-1 Entry Inhibitor BMS-626529 in Complex with Human Antibodies PGT122 and 35O22 at 3.8 Angstrom",
+      "resolution_A": 3.031,
+      "deposited": "2016-12-12",
+      "method": "X-RAY DIFFRACTION",
+      "non_glycan_ligands": [
+        "83J",
+        "NAG",
+        "SO4"
+      ],
+      "sha256": "4d0785c9c39ae162a45efec4ad54000bc0cfe4aea1410ebdd6d13a3fd209e12a",
+      "mb": 0.64
+    },
+    "5U7M": {
+      "title": "Crystal Structure of HIV-1 BG505 SOSIP.664 Prefusion Env Trimer Bound to Small Molecule HIV-1 Entry Inhibitor BMS-378806 in Complex with Human Antibodies PGT122 and 35O22 at 3.8 Angstrom",
+      "resolution_A": 3.025,
+      "deposited": "2016-12-12",
+      "method": "X-RAY DIFFRACTION",
+      "non_glycan_ligands": [
+        "83G",
+        "NAG",
+        "SO4"
+      ],
+      "sha256": "1d9b3516b59a55444bec76c39030d463949f1864c0cc1cca8f65e8e611d881b7",
+      "mb": 0.64
+    },
+    "6U0L": {
+      "title": "Asymmetrically open conformational state (Class I) of HIV-1 Env trimer BG505 SOSIP.664 in complex with sCD4 and E51 Fab",
+      "resolution_A": 3.3,
+      "deposited": "2019-08-14",
+      "method": "ELECTRON MICROSCOPY",
+      "non_glycan_ligands": [
+        "NAG",
+        "TYS"
+      ],
+      "sha256": "77715502fd6c6785b51ecf229248779ee09655a6eb47fc05cca8c95d19a32620",
+      "mb": 0.47
+    },
+    "8Z7N": {
+      "title": "Structure of HIV-1 CH119 SOSIP.664 trimer in complex with CD4 molecules",
+      "resolution_A": 3.58,
+      "deposited": "2024-04-20",
+      "method": "ELECTRON MICROSCOPY",
+      "non_glycan_ligands": [
+        "NAG"
+      ],
+      "sha256": "108897ce2c8483fecc09aace382953654f48eaac1b12aee621f4c5915b203cdb",
+      "mb": 0.41
+    }
+  },
+  "chembl": {
+    "chembl_version": "ChEMBL_37",
+    "rows": 680,
+    "molecules": 564
+  },
+  "uniprot": {
+    "uniprot_query": "(gene:env) AND (organism_id:11676) AND (length:[600 TO 900]) AND (fragment:false)",
+    "sequences": 3361
+  },
+  "elapsed_s": 123.1
+}
