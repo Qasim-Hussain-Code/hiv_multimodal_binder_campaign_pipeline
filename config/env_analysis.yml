@@ -1,0 +1,19 @@
+name: hiv_stage7
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - rdkit
+  - gemmi
+  - biopython
+  - scipy
+  - pandas
+  - numpy
+  - matplotlib
+  - psutil
+  - requests
+  - openbabel
+  - vina
+  - pip
+  - pip:
+      - meeko
