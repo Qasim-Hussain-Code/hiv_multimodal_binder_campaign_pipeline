@@ -1,0 +1,55 @@
+# Nothing under data/ is tracked. data/README.md records which earlier
+# repository each input came from, at which commit, and the download date of
+# every database export.
+data/
+
+# Structure and pose archives. Stage 7 imports tables and top-N poses only.
+*.pdb
+*.pdb.gz
+*.cif
+*.cif.gz
+*.pdbqt
+*.sdf
+*.sdf.gz
+*.mol2
+
+# Alignment downloads and CATNAP exports. Both databases grow, so the record
+# count and download date live in logs/ instead of a tracked copy.
+*.fasta
+*.fa
+*.aln
+*.a3m
+catnap_*.csv
+catnap_*.tsv
+lanl_*.txt
+
+# Conda environment directories. 01_install.sh rebuilds them from tracked lock files.
+envs/
+.conda/
+
+# Model weight files. Excluded for size (the repository refuses tracked files
+# over 50 MB) and because their licences differ from the code licence.
+weights/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npz
+params/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Per-run scratch. logs/ is tracked, logs/scratch/ is not.
+logs/scratch/
+tmp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
