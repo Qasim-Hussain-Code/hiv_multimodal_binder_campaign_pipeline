@@ -1,0 +1,66 @@
+{
+ "S1_closed_apo": {
+  "pdb": "4TVP",
+  "centre": [
+   -274.522,
+   -138.312,
+   -16.211
+  ],
+  "gp120_entity": "1",
+  "env_entities": [
+   "1",
+   "2"
+  ],
+  "superposition_rmsd": 0.71,
+  "aligned_ca": 444,
+  "protein_atoms_within_8A": 99
+ },
+ "S2_closed_holo": {
+  "pdb": "5U7O",
+  "centre": [
+   196.02,
+   284.292,
+   29.233
+  ],
+  "gp120_entity": "4",
+  "env_entities": [
+   "1",
+   "4"
+  ],
+  "superposition_rmsd": 0.0,
+  "aligned_ca": 444,
+  "protein_atoms_within_8A": 82
+ },
+ "S3_open_cd4": {
+  "pdb": "6U0L",
+  "centre": [
+   170.381,
+   178.559,
+   159.492
+  ],
+  "gp120_entity": "1",
+  "env_entities": [
+   "1",
+   "5"
+  ],
+  "superposition_rmsd": 4.49,
+  "aligned_ca": 364,
+  "protein_atoms_within_8A": 95
+ },
+ "S4_cd4_cladeCRF": {
+  "pdb": "8Z7N",
+  "centre": [
+   199.165,
+   214.504,
+   238.177
+  ],
+  "gp120_entity": "1",
+  "env_entities": [
+   "1",
+   "2"
+  ],
+  "superposition_rmsd": 6.55,
+  "aligned_ca": 307,
+  "protein_atoms_within_8A": 93
+ }
+}

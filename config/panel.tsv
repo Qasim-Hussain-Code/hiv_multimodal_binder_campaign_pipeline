@@ -1,0 +1,5 @@
+state	pdb	resolution_A	deposited	method	clade	clade_source	conformation	cd4_bound	non_glycan_ligands	aligned_ca_to_5U7O	ca_rmsd_to_5U7O
+S1_closed_apo	4TVP	3.1	2014-06-27	X-RAY DIFFRACTION	A	BG505, clade A (Pancera 2014)	closed, pocket not liganded	no	NAG;SO4	444	0.71
+S2_closed_holo	5U7O	3.031	2016-12-12	X-RAY DIFFRACTION	A	BG505, clade A (Pancera 2017)	closed, temsavir-bound (83J)	no	83J;NAG;SO4	444	0.0
+S3_open_cd4	6U0L	3.3	2019-08-14	ELECTRON MICROSCOPY	A	BG505, clade A (RCSB title)	asymmetrically open, CD4 and E51 bound	yes	NAG;TYS	364	4.49
+S4_cd4_cladeCRF	8Z7N	3.58	2024-04-20	ELECTRON MICROSCOPY	CRF07_BC?	strain CH119; subtype NOT read from a database field, from deposition title 'Asia CRFs'. Verify.	intermediate open, CD4 bound	yes	NAG	307	6.55
