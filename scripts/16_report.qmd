@@ -1,0 +1,59 @@
+---
+title: "Small-molecule arm against the HIV-1 Env trimer: analysis report"
+format:
+  html:
+    embed-resources: true
+jupyter: python3
+---
+
+Render with `quarto render scripts/16_report.qmd`. Quarto was not installed on the machine that produced the results, so this file has not been rendered there. It reads only tables in `results/`.
+
+```{python}
+import pandas as pd
+from pathlib import Path
+R = Path("..") / "results"
+```
+
+## Positive controls
+
+```{python}
+pd.read_csv(R / "control_ranks.tsv", sep="\t")
+```
+
+## Funnel per state and glycan arm
+
+```{python}
+pd.read_csv(R / "funnel.tsv", sep="\t")
+```
+
+## Null floor
+
+```{python}
+pd.read_csv(R / "null_floor.tsv", sep="\t")
+```
+
+## State rank correlation
+
+```{python}
+pd.read_csv(R / "state_rank_correlation.tsv", sep="\t")
+```
+
+## Glycan effect
+
+```{python}
+pd.read_csv(R / "glycan_summary.tsv", sep="\t")
+```
+
+## Potency association and temsavir redocking
+
+```{python}
+display(pd.read_csv(R / "potency_association.tsv", sep="\t"))
+pd.read_csv(R / "redock_temsavir_S2.tsv", sep="\t")
+```
+
+## Cost and timing
+
+```{python}
+display(pd.read_csv(R / "cost_model.tsv", sep="\t"))
+pd.read_csv(R / "timing_distributions.tsv", sep="\t")
+```

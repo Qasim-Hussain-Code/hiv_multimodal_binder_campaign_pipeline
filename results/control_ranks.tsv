@@ -1,0 +1,17 @@
+state	arm	control	score	heavy_atoms	pool_size	rank_unfiltered	pctl_unfiltered	escape_prone	rank_filtered	pctl_filtered	pctl_within_null	null_size
+S1_closed_apo	glycan_free	BMS378806_83G	2.619	30	69	65	94.2	False	65.0	94.20289855072464	88.7	97
+S1_closed_apo	glycan_free	temsavir_83J	2.884	35	69	66	95.7	False	66.0	95.65217391304348	88.7	97
+S1_closed_apo	glycosylated	BMS378806_83G	-2.062	30	69	47	68.1	False	47.0	68.1159420289855	63.9	97
+S1_closed_apo	glycosylated	temsavir_83J	2.541	35	69	64	92.8	False	64.0	92.7536231884058	87.6	97
+S2_closed_holo	glycan_free	BMS378806_83G	-0.47	30	69	39	56.5	False	39.0	57.35294117647059	63.9	97
+S2_closed_holo	glycan_free	temsavir_83J	32.494	35	69	63	91.3	False	62.0	91.17647058823529	89.7	97
+S2_closed_holo	glycosylated	BMS378806_83G	2.199	30	69	49	71.0	False	49.0	71.01449275362319	81.4	97
+S2_closed_holo	glycosylated	temsavir_83J	333.02	35	69	69	100.0	False	69.0	100.0	100.0	97
+S3_open_cd4	glycan_free	temsavir_83J	-7.639	35	69	45	65.2	False	45.0	65.21739130434783	21.6	97
+S3_open_cd4	glycan_free	BMS378806_83G	-7.021	30	69	64	92.8	False	64.0	92.7536231884058	48.5	97
+S3_open_cd4	glycosylated	temsavir_83J	-6.985	35	69	62	89.9	False	62.0	89.85507246376811	48.5	97
+S3_open_cd4	glycosylated	BMS378806_83G	-6.95	30	69	64	92.8	False	64.0	92.7536231884058	48.5	97
+S4_cd4_cladeCRF	glycan_free	BMS378806_83G	-8.045	30	69	23	33.3	False	23.0	33.333333333333336	3.1	97
+S4_cd4_cladeCRF	glycan_free	temsavir_83J	-6.935	35	69	60	87.0	False	60.0	86.95652173913044	40.2	97
+S4_cd4_cladeCRF	glycosylated	BMS378806_83G	-8.045	30	69	23	33.3	False	23.0	33.333333333333336	3.1	97
+S4_cd4_cladeCRF	glycosylated	temsavir_83J	-6.935	35	69	60	87.0	False	60.0	86.95652173913044	40.2	97

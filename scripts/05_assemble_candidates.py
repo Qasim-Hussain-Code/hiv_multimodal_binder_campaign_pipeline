@@ -108,7 +108,7 @@ def main():
     for k, n in sorted(want.items()):
         nulls += [p for p in pool if b(p[2]) == k][:round(a.n_null * n / tot)]
     for cid, st, h in nulls:
-        rows.append(dict(smiles=st, role="null", chembl=cid, nM=float("nan"), assay_type="", doc="ChEMBL_random", ik=ikey14(st)))
+        rows.append(dict(smiles=st, role="random_null", chembl=cid, nM=float("nan"), assay_type="", doc="ChEMBL_random", ik=ikey14(st)))
 
     rng.shuffle(rows)
     for i, r in enumerate(rows):
@@ -122,7 +122,7 @@ def main():
     pd.DataFrame(excl, columns=["chembl", "reason"]).to_csv(ROOT / "results" / "excluded_candidates.tsv", sep="\t", index=False)
     summ = dict(env_annotated_molecules=int(n0), excluded=len({m for m, _ in excl}),
                 candidates=int((df.role == "candidate").sum()), controls=int(df.role.str.startswith("control").sum()),
-                null=int((df.role == "null").sum()), null_pool=len(pool), seed=a.seed, control_found_in_chembl_env=in_chembl)
+                null=int((df.role == "random_null").sum()), null_pool=len(pool), seed=a.seed, control_found_in_chembl_env=in_chembl)
     (ROOT / "results" / "candidate_summary.json").write_text(json.dumps(summ, indent=1))
     print(json.dumps(summ), file=sys.stderr)
 

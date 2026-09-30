@@ -1,0 +1,3 @@
+arm	centroid_distance_A	crystal_atoms_within_2A_of_pose	crystal_heavy_atoms	pose_heavy_atoms
+glycan_free	7.96	0.03	58	35
+glycosylated	7.6	0.03	58	35

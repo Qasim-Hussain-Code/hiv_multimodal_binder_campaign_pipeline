@@ -1,0 +1,11 @@
+{
+ "measured_dockings": 10,
+ "mean_wall_s": 27.9,
+ "candidates": 168,
+ "states": 4,
+ "dockings_total": 1344,
+ "projected_wall_h": 5.2,
+ "pose_kb_each": 2.7,
+ "projected_disk_gb": 0.003,
+ "jobs": 2
+}

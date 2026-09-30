@@ -76,7 +76,7 @@ def main():
 
     # 4 null floor
     d = sc.merge(lab[["id", "role"]], on="id")
-    d["grp"] = np.where(d.role == "null", "null", "Env-directed")
+    d["grp"] = np.where(d.role == "random_null", "null", "Env-directed")
     fig, axs = plt.subplots(1, len(states), figsize=(8, 2.8), sharey=True)
     for ax, s in zip(np.atleast_1d(axs), states):
         g = d[(d.state == s) & (d.arm == "glycosylated")]

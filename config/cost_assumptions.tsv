@@ -1,0 +1,7 @@
+item	value	unit	basis
+compound_purchase	150	USD per compound	placeholder for a 5 mg catalogue or custom-synthesis order, not a quote
+compound_lead_time	21	days	placeholder
+assay_reagents_per_compound	45	USD per compound per virus	placeholder for TZM-bl plates, luciferase reagent and pseudovirus, not a quote
+bench_hours_per_compound	3	hours per compound per virus	placeholder for an 8-point duplicate dilution series, including plate setup and reading
+viruses_per_compound	4	viruses	BG505 plus three panel viruses, see preregistration
+hourly_rate	0	USD per hour	labour left out on purpose, bench hours are reported separately

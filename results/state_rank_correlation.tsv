@@ -1,0 +1,13 @@
+arm	state_a	state_b	n	spearman
+glycan_free	S1_closed_apo	S2_closed_holo	69	0.424
+glycan_free	S1_closed_apo	S3_open_cd4	69	-0.136
+glycan_free	S1_closed_apo	S4_cd4_cladeCRF	69	0.179
+glycan_free	S2_closed_holo	S3_open_cd4	69	-0.199
+glycan_free	S2_closed_holo	S4_cd4_cladeCRF	69	0.131
+glycan_free	S3_open_cd4	S4_cd4_cladeCRF	69	0.339
+glycosylated	S1_closed_apo	S2_closed_holo	69	0.373
+glycosylated	S1_closed_apo	S3_open_cd4	69	-0.01
+glycosylated	S1_closed_apo	S4_cd4_cladeCRF	69	0.322
+glycosylated	S2_closed_holo	S3_open_cd4	69	-0.105
+glycosylated	S2_closed_holo	S4_cd4_cladeCRF	69	0.024
+glycosylated	S3_open_cd4	S4_cd4_cladeCRF	69	0.563

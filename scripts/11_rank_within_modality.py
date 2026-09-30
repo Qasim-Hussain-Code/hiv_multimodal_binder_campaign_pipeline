@@ -55,8 +55,8 @@ def main():
     d = sc.merge(lab[["id", "role", "chembl", "nM"]], on="id").merge(
         cons[["id", "state", "arm", "escape_prone", "mean_entropy_bits", "n_contacts"]], on=["id", "state", "arm"], how="left")
     d["escape_prone"] = d.escape_prone.fillna(False).astype(bool)
-    pool = d[d.role != "null"]
-    null = d[d.role == "null"]
+    pool = d[d.role != "random_null"]
+    null = d[d.role == "random_null"]
     rng = np.random.default_rng(SEED)
 
     long, ctl, funnel, floor = [], [], [], []

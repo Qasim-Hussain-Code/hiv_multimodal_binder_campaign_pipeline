@@ -1,0 +1,9 @@
+state	arm	n	spearman_score_vs_pot	spearman_size_adjusted	spearman_heavy_vs_pot
+S1_closed_apo	glycan_free	69	0.107	-0.091	0.187
+S1_closed_apo	glycosylated	69	0.011	-0.063	0.187
+S2_closed_holo	glycan_free	69	0.153	-0.013	0.187
+S2_closed_holo	glycosylated	69	0.34	0.05	0.187
+S3_open_cd4	glycan_free	69	0.027	-0.078	0.187
+S3_open_cd4	glycosylated	69	0.018	0.012	0.187
+S4_cd4_cladeCRF	glycan_free	69	0.059	-0.016	0.187
+S4_cd4_cladeCRF	glycosylated	69	0.059	-0.016	0.187

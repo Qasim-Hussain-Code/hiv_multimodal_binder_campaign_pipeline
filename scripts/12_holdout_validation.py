@@ -51,7 +51,7 @@ def main():
     sc = pd.read_csv(R / "dock_scores.tsv", sep="\t")
     lab = pd.read_csv(DATA / "candidates" / "labels.tsv", sep="\t")
     d = sc.merge(lab, on="id")
-    cand = d[(d.role != "null") & d.nM.notna() & (d.nM > 0)].copy()
+    cand = d[(d.role != "random_null") & d.nM.notna() & (d.nM > 0)].copy()
     cand["pot"] = -np.log10(cand.nM)
     rows = []
     for (s, a), g in cand.groupby(["state", "arm"]):

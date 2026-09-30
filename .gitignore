@@ -1,7 +1,8 @@
 # Nothing under data/ is tracked. data/README.md records which earlier
 # repository each input came from, at which commit, and the download date of
 # every database export.
-data/
+data/*
+!data/README.md
 
 # Structure and pose archives. Stage 7 imports tables and top-N poses only.
 *.pdb
