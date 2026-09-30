@@ -1,0 +1,5 @@
+state	compounds	lost_to_glycans	median_delta	max_delta	poses_touching_glycan
+S1_closed_apo	69	12	-0.08	170.39	0
+S2_closed_holo	69	0	-0.01	0.14	27
+S3_open_cd4	69	2	0.0	4.89	0
+S4_cd4_cladeCRF	69	0	0.0	0.0	0

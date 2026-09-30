@@ -1,0 +1,9 @@
+state	arm	n	wall_median_s	wall_p05_s	wall_p95_s	wall_max_s	rss_median_mb	rss_p95_mb	rss_max_mb
+S1_closed_apo	glycan_free	166	56.0	15.7	1522.8	4540.1	445.3	555.1	834.4
+S1_closed_apo	glycosylated	166	78.9	35.0	751.6	8388.3	445.3	562.3	997.3
+S2_closed_holo	glycan_free	166	34.8	15.4	152.7	619.1	445.2	562.1	986.8
+S2_closed_holo	glycosylated	166	20.8	11.3	73.2	370.1	445.3	562.2	906.9
+S3_open_cd4	glycan_free	166	28.3	15.4	111.6	385.8	445.0	561.9	980.9
+S3_open_cd4	glycosylated	166	26.0	14.7	93.7	330.9	445.0	554.8	905.9
+S4_cd4_cladeCRF	glycan_free	166	25.6	13.9	93.9	341.9	445.0	554.8	1013.2
+S4_cd4_cladeCRF	glycosylated	166	27.5	13.9	107.4	3284.2	445.0	561.9	1052.5
