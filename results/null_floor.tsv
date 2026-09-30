@@ -1,0 +1,9 @@
+state	arm	auc_pool_vs_null	auc_ci95_lo	auc_ci95_hi	spearman_score_vs_heavy_atoms_pool	spearman_score_vs_heavy_atoms_null	median_score_pool	median_score_null
+S1_closed_apo	glycan_free	0.58	0.483	0.675	0.633	0.466	-3.62	-3.14
+S1_closed_apo	glycosylated	0.576	0.486	0.66	0.559	0.468	-3.77	-3.39
+S2_closed_holo	glycan_free	0.572	0.48	0.658	-0.556	-0.388	-9.54	-9.28
+S2_closed_holo	glycosylated	0.572	0.494	0.655	-0.536	-0.385	-9.68	-9.27
+S3_open_cd4	glycan_free	0.782	0.714	0.853	-0.314	-0.035	-7.91	-6.91
+S3_open_cd4	glycosylated	0.781	0.698	0.849	-0.148	-0.065	-7.81	-6.89
+S4_cd4_cladeCRF	glycan_free	0.808	0.745	0.874	0.107	0.2	-7.79	-6.62
+S4_cd4_cladeCRF	glycosylated	0.808	0.721	0.879	0.107	0.2	-7.79	-6.62
