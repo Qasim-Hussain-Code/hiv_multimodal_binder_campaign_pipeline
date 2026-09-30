@@ -1,0 +1,14 @@
+tool	version
+python	Python 3.13.11
+obabel	Open Babel 2.4.1 -- Oct 10 2016 -- 21:27:47
+vina	AutoDock Vina v1.2.7
+rdkit	2025.03.6
+meeko	0.7.1
+gemmi	0.7.5
+Bio	1.86
+scipy	1.16.3
+pandas	2.3.3
+numpy	2.3.5
+matplotlib	3.10.8
+psutil	7.0.0
+requests	2.32.5
