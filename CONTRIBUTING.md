@@ -19,7 +19,7 @@ Every line of prose, every comment and every commit message should read as thoug
 
 ## Scores
 
-A docking score is the output of an empirical function fitted to a training set. It is not a binding energy. Write the units and the function next to every score. Do not describe any computational score as a predicted IC50, and do not write any sentence that could be read as a claim about treating or preventing infection in a person.
+A docking score is the output of an empirical function fitted to a training set. It is neither a free energy nor an affinity. Write the units and the function next to every score. Do not describe any computational score as an IC50 estimate, and do not write any sentence that could be read as a claim about treating or preventing infection in a person.
 
 There is no pooled cross-modality score in this repository and a pull request adding one will be declined. The four modalities are ranked within themselves.
 

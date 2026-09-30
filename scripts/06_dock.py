@@ -10,9 +10,9 @@ built around benchmark complexes and has no entry point for a bare SMILES list.
 That is a deviation from 'import, do not rewrite' and the README says so.
 
 The number this stage writes is a Vina score, the output of an empirical
-function fitted to a training set of protein-ligand complexes, in the units of
-that function (labelled kcal/mol, which it is not: it is not a free energy and
-was never a binding energy). It is a ranking key and nothing more.
+function fitted to a training set of protein-ligand complexes. Vina prints it
+in units labelled kcal/mol. It is neither a free energy nor an affinity, and it
+is a ranking key and nothing more.
 
 Controls. The script never reads labels.tsv. Temsavir and BMS-378806 sit in
 the candidate list under anonymous ids and go through the same functions as

@@ -45,8 +45,8 @@ def main():
         ax.set_xticks(range(len(states))); ax.set_xticklabels([s.split("_")[0] for s in states])
         ax.set_title(name.replace("_", " "), fontsize=9); ax.set_ylim(0, 105); ax.invert_yaxis()
     axs[0].set_ylabel("rank percentile in pool (top = 0)")
-    axs[0].legend(frameon=False, fontsize=7, loc="lower left")
-    fig.text(0.5, -0.02, "black ring: pose flagged escape-prone. Dashed line: median of the pool.", ha="center", fontsize=7)
+    axs[1].legend(frameon=False, fontsize=7, loc="upper right", bbox_to_anchor=(1.0, 0.75))
+    fig.text(0.5, -0.02, "Dashed line: median of the pool. Lower on the axis is a worse rank. No pose was flagged escape-prone.", ha="center", fontsize=7)
     fig.tight_layout(); fig.savefig(F / "fig1_positive_controls.png", bbox_inches="tight"); plt.close(fig)
 
     # 2 funnel
@@ -87,7 +87,9 @@ def main():
         for role, m in [("control:temsavir_83J", "*"), ("control:BMS378806_83G", "D")]:
             v = g[g.role == role].score
             ax.scatter([1.28], v, marker=m, color="#D55E00", s=40, zorder=4)
-        ax.set_xticks([0, 1]); ax.set_xticklabels(["null", "Env"]); ax.set_title(s.split("_")[0], fontsize=9)
+        n_out = int((g.score > 15).sum())
+        ax.set_ylim(-15, 15)
+        ax.set_xticks([0, 1]); ax.set_xticklabels(["null", "Env"]); ax.set_title(f"{s.split('_')[0]} ({n_out} above +15 not shown)", fontsize=8)
     np.atleast_1d(axs)[0].set_ylabel("Vina score (Vina units)")
     fig.tight_layout(); fig.savefig(F / "fig4_null_floor.png"); plt.close(fig)
 
