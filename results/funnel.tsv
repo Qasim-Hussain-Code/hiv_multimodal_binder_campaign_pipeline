@@ -1,9 +1,0 @@
-state	arm	docked_pool	removed_by_conservation	remaining	null_docked	null_removed_by_conservation
-S1_closed_apo	glycan_free	69	0	69	97	0
-S1_closed_apo	glycosylated	69	0	69	97	0
-S2_closed_holo	glycan_free	69	1	68	97	1
-S2_closed_holo	glycosylated	69	0	69	97	1
-S3_open_cd4	glycan_free	69	0	69	97	0
-S3_open_cd4	glycosylated	69	0	69	97	0
-S4_cd4_cladeCRF	glycan_free	69	0	69	97	0
-S4_cd4_cladeCRF	glycosylated	69	0	69	97	0
