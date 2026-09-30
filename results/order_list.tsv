@@ -1,0 +1,18 @@
+order	id	kind	median_pctl_across_states	chembl	smiles
+1	C0070	ranked candidate	7.2	CHEMBL4865734	O=C(NC1(c2nc(CO)cs2)CCNCC1)c1ccc(-c2ccc(C(F)(F)F)cc2)[nH]1
+2	C0047	ranked candidate	12.3	CHEMBL1645256	O=C(NCC1NCCc2ccccc21)C(=O)Nc1ccc(Cl)c(F)c1
+3	C0024	ranked candidate	18.1	CHEMBL1645265	O=C(Nc1ccc(Cl)c(F)c1)C(=O)NC1CCNC2(CCC2)C1
+4	C0116	ranked candidate	19.6	CHEMBL1645111	CC1(C)CC(NC(=O)C(=O)Nc2ccc(Cl)c(F)c2)CC(C)(C)N1
+5	C0151	ranked candidate	19.6	CHEMBL4579482	CC1(C)CC(NC(=O)C(=O)Nc2ccc(C(F)(F)F)cn2)CC(C)(C)N1
+6	C0148	ranked candidate	19.6	CHEMBL4547005	NC[C@@H](NC(=O)c1ccc(-c2ccc(C(F)(F)F)cc2)[nH]1)c1ncc(CO)s1
+7	C0097	ranked candidate	22.5	CHEMBL1645263	O=C(Nc1ccc(Cl)c(F)c1)C(=O)NC1CCN(C2CCCCC2)C1
+8	C0103	ranked candidate	23.9	CHEMBL4563477	O=C(Nc1ccc(F)nc1)C(=O)NC1CCNC2(CCCCC2)C1
+9	C0102	ranked candidate	24.6	CHEMBL1645291	O=C(NCc1ccccc1CN1CCOCC1)C(=O)Nc1ccc(Cl)c(F)c1
+10	C0013	ranked candidate	25.4	CHEMBL1645287	O=C(NCC(c1ccc(Cl)cc1)N1CCCC1)C(=O)Nc1ccc(Cl)c(F)c1
+	C0101	anchor temsavir_83J	88.4	CHEMBL3301620	Cc1ncn(n1)c2c3c(c(c[nH]3)C(=O)C(=O)N4CCN(CC4)C(=O)c5ccccc5)c(cn2)OC
+	C0117	anchor BMS378806_83G	55.8	CHEMBL337301	C[C@@H]1CN(CCN1C(=O)C(=O)c2c[nH]c3c2c(ccn3)OC)C(=O)c4ccccc4
+	C0168	null negative		CHEMBL1970028	O=C(NC(Cl)(C(F)(F)F)C(F)(F)F)c1ccc(F)cc1
+	C0076	null negative		CHEMBL3985764	CNc1ncc(Cl)c(N[C@@H](C)c2cc3cccc(C)c3c(=O)n2-c2ccccc2)n1
+	C0057	null negative		CHEMBL3552224	Cc1nc(CO[C@H]2CN(Cc3cccs3)[C@@H]3COC[C@H]23)cs1
+	C0048	null negative		CHEMBL3985901	Cn1c2c(c3ccccc31)CC1c3cc4c(cc3CCN1C2)OCO4
+	C0033	null negative		CHEMBL3623166	CN(CC(=O)O)NC(=O)C[C@H](N)C[C@@H](O)CNCc1ccccc1
