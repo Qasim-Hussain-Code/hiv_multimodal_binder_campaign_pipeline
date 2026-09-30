@@ -1,49 +1,75 @@
 {
  "S1_closed_apo__glycan_free": {
-  "protein_residues": 278,
+  "protein_residues": 271,
   "glycan_residues": 0,
-  "pdbqt_atoms": 2711,
-  "kb": 229
+  "non_polymer_residues_dropped": {
+   "NAG": 21,
+   "SO4": 27,
+   "HOH": 57
+  },
+  "pdbqt_atoms": 2686,
+  "kb": 225
  },
  "S1_closed_apo__glycosylated": {
-  "protein_residues": 278,
+  "protein_residues": 271,
   "glycan_residues": 10,
-  "pdbqt_atoms": 2873,
-  "kb": 242
+  "non_polymer_residues_dropped": {
+   "SO4": 27,
+   "HOH": 57
+  },
+  "pdbqt_atoms": 2848,
+  "kb": 238
  },
  "S2_closed_holo__glycan_free": {
-  "protein_residues": 241,
+  "protein_residues": 240,
   "glycan_residues": 0,
-  "pdbqt_atoms": 2384,
-  "kb": 198
+  "non_polymer_residues_dropped": {
+   "SO4": 4,
+   "NAG": 7,
+   "83J": 1
+  },
+  "pdbqt_atoms": 2347,
+  "kb": 195
  },
  "S2_closed_holo__glycosylated": {
-  "protein_residues": 241,
+  "protein_residues": 240,
   "glycan_residues": 10,
-  "pdbqt_atoms": 2546,
-  "kb": 211
+  "non_polymer_residues_dropped": {
+   "SO4": 4,
+   "83J": 1
+  },
+  "pdbqt_atoms": 2509,
+  "kb": 208
  },
  "S3_open_cd4__glycan_free": {
-  "protein_residues": 204,
+  "protein_residues": 202,
   "glycan_residues": 0,
-  "pdbqt_atoms": 1944,
-  "kb": 159
+  "non_polymer_residues_dropped": {
+   "NAG": 21
+  },
+  "pdbqt_atoms": 1909,
+  "kb": 156
  },
  "S3_open_cd4__glycosylated": {
-  "protein_residues": 204,
-  "glycan_residues": 5,
+  "protein_residues": 202,
+  "glycan_residues": 7,
+  "non_polymer_residues_dropped": {},
   "pdbqt_atoms": 2023,
   "kb": 166
  },
  "S4_cd4_cladeCRF__glycan_free": {
   "protein_residues": 200,
   "glycan_residues": 0,
+  "non_polymer_residues_dropped": {
+   "NAG": 18
+  },
   "pdbqt_atoms": 1944,
   "kb": 160
  },
  "S4_cd4_cladeCRF__glycosylated": {
   "protein_residues": 200,
   "glycan_residues": 0,
+  "non_polymer_residues_dropped": {},
   "pdbqt_atoms": 1944,
   "kb": 160
  }

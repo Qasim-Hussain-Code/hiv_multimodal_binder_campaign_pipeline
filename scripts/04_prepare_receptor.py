@@ -28,6 +28,7 @@ import gemmi
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CROP_A = 24.0
+SUGARS = {"NAG", "NDG", "BMA", "MAN", "FUC", "FUL", "GAL", "SIA", "A2G", "BGC"}
 OBABEL = shutil.which("obabel") or "obabel"
 
 
@@ -40,6 +41,7 @@ def build(pdb, box, arm):
     om = gemmi.Model("1")
     letters = iter("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
     n_prot = n_gly = 0
+    dropped = {}
     for ch in m:
         if len(ch) == 0:
             continue
@@ -50,6 +52,19 @@ def build(pdb, box, arm):
             continue
         new = gemmi.Chain(next(letters))
         for r in ch:
+            # Ligands (temsavir, sulfate) are listed as residues inside the polymer
+            # chain, so the chain-level test above is not enough. Keeping them put
+            # temsavir into the S2 pocket it was being docked into (found when the
+            # crystal ligand redocked to a score of +32, and the score of every S2
+            # docking was invalid). Only residues that are themselves polymer, or
+            # glycan in the glycosylated arm, are kept.
+            if is_poly and r.name in SUGARS and arm == "glycosylated":
+                pass    # Asn-linked core sugar that the deposition lists inside the protein chain
+            elif is_poly and r.entity_type != gemmi.EntityType.Polymer:
+                dropped[r.name] = dropped.get(r.name, 0) + 1
+                continue
+            if is_gly and r.entity_type != gemmi.EntityType.Branched:
+                continue
             if not any(a.pos.dist(c) < CROP_A for a in r):
                 continue
             r2 = gemmi.Residue(); r2.name = r.name; r2.seqid = r.seqid; r2.het_flag = r.het_flag
@@ -61,31 +76,32 @@ def build(pdb, box, arm):
                 r2.add_atom(a2)
             if len(r2):
                 new.add_residue(r2)
-                if is_poly: n_prot += 1
+                if is_poly and r.name not in SUGARS: n_prot += 1
                 else: n_gly += 1
         if len(new):
             om.add_chain(new)
     out.add_model(om)
-    return out, n_prot, n_gly
+    return out, n_prot, n_gly, dropped
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.parse_args()
+    ap.add_argument('--force', action='store_true', help='rebuild receptors that already exist')
+    a = ap.parse_args()
     boxes = json.loads((ROOT / "config" / "boxes.json").read_text())
     rd = DATA / "receptors"; rd.mkdir(parents=True, exist_ok=True)
     summary = {}
     for state, box in boxes.items():
         for arm in ("glycan_free", "glycosylated"):
             f = rd / f"{state}__{arm}"
-            if f.with_suffix(".pdbqt").exists():
+            if f.with_suffix(".pdbqt").exists() and not a.force:
                 continue
-            st, npro, ngly = build(box["pdb"], box, arm)
+            st, npro, ngly, dropped = build(box["pdb"], box, arm)
             st.write_pdb(str(f.with_suffix(".pdb")))
             subprocess.run([OBABEL, str(f.with_suffix(".pdb")), "-O", str(f.with_suffix(".pdbqt")), "-xr", "-p", "7.4"],
                            check=True, capture_output=True)
             n_atoms = sum(1 for l in f.with_suffix(".pdbqt").read_text().splitlines() if l.startswith(("ATOM", "HETATM")))
-            summary[f"{state}__{arm}"] = dict(protein_residues=npro, glycan_residues=ngly, pdbqt_atoms=n_atoms,
+            summary[f"{state}__{arm}"] = dict(protein_residues=npro, glycan_residues=ngly, non_polymer_residues_dropped=dropped, pdbqt_atoms=n_atoms,
                                               kb=round(f.with_suffix(".pdbqt").stat().st_size / 1e3))
             print(f"[receptor] {state} {arm}: {npro} protein residues, {ngly} glycan residues, {n_atoms} atoms", file=sys.stderr)
     (ROOT / "results").mkdir(exist_ok=True)
