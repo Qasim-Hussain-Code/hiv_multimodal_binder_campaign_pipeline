@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stage 04. Build one cropped receptor per state and per glycan arm.
 
-Glycan arms. The brief asks for modelled glycans. No glycan modelling tool
+Glycan arms. The plan was to model the glycans. No glycan modelling tool
 was run: the machine had 2 GB of free disk and no GlycoSHIELD or Rosetta
 glycan library, and a defensible model of the shield needs one or the other.
 What this stage does instead is keep the sugar residues that the deposition

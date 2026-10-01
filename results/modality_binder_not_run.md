@@ -7,7 +7,7 @@ set. Stage 2 (colabfold_boltz_structure_confidence_pipeline) exists and could
 re-predict designs, but it has nothing to re-predict. The positive controls for
 this modality, eCD4-Ig and a CD4-mimetic miniprotein, were not scored.
 
-The CATNAP retrospective test the brief describes belongs to this arm. It was
+The CATNAP retrospective test I planned belongs to this arm. It was
 not run either. CATNAP is distributed through a web form at hiv.lanl.gov and
 this machine had no pipeline to feed it.
 

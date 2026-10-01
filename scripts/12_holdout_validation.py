@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stage 12. What can be tested against data the docking never saw.
 
-The brief's held-out test is CATNAP neutralisation data against the
+The held-out test I planned is CATNAP neutralisation data against the
 protein-binder arm. That arm was not run, and CATNAP (hiv.lanl.gov/catnap) is
 served through a web form that was not downloaded here, so the CATNAP
 retrospective and the twelve-virus panel coverage were not run. This script

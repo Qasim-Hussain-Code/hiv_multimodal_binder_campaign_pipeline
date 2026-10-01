@@ -18,7 +18,7 @@ cat > "${REPO_ROOT}/results/modality_peptide_not_run.md" <<'MD'
 
 No peptide candidates were ranked.
 
-The brief asks this arm to import stage 4's peptide screen. Stage 4
+This arm was meant to import stage 4's peptide screen. Stage 4
 (vina_litpcba_virtual_screening_pipeline) screens small molecules on 15
 LIT-PCBA targets and has no peptide arm. Nothing was carried forward, so the
 positive control for this modality, enfuvirtide (T-20), was not scored and no

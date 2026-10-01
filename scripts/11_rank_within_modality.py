@@ -18,7 +18,7 @@ is arbitrary.
 
 Conservation. Two rankings are written for each state and arm. 'unfiltered' is
 the ranking to answer question 1 (does the pipeline find a known inhibitor at
-all). 'filtered' removes escape-prone poses first, as the brief requires for
+all). 'filtered' removes escape-prone poses first, as the plan requires for
 the list you would order from. Reporting both is what makes it visible when the
 filter removes a control.
 

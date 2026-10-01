@@ -8,8 +8,8 @@ null draws and which ChEMBL potency belongs to which id lives in labels.tsv,
 read only by stage 11. The control is scored by the same function as every
 other row for that reason, and the docking code has no way to tell it apart.
 
-Sources. The brief names stage 4's LIT-PCBA-calibrated screen as the source of
-candidates. That screen is calibrated on 15 non-Env targets and holds no Env
+Sources. I planned to take candidates from stage 4's LIT-PCBA-calibrated
+screen. That screen is calibrated on 15 non-Env targets and holds no Env
 compounds, so it cannot supply them. The candidate set is ChEMBL compounds
 annotated to an HIV-1 Env target whose source paper is on the include list in
 config/candidate_sources.tsv. ChEMBL's Env annotation is noisy (NNRTI and

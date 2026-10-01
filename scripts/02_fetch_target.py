@@ -2,7 +2,7 @@
 """Stage 02. Fetch the Env structures, the ChEMBL Env-annotated activity export
 and a set of UniProt Env sequences, each stamped with the date it was pulled.
 
-Nothing here is taken on trust from the project brief: resolution, deposition
+Nothing here is taken on trust from my own planning notes: resolution, deposition
 date, method and ligand identity are read from RCSB and from the coordinate
 file itself. Clade is not a field in the RCSB entry, so it is written to
 config/panel.tsv by hand in stage 03 with the source of each assignment.

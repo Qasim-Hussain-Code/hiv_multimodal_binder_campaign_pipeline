@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Stage 10. Per-position entropy, contact residues per pose, escape-prone flags.
 
-Alignment source. The brief asks for a Los Alamos HIV sequence database
+Alignment source. I planned to use a Los Alamos HIV sequence database
 alignment. LANL alignments come from a web form and there is no scriptable
 download, so this stage uses 3,000+ UniProt HIV-1 env sequences (non-fragment,
 600-900 residues; the query is in logs/02_fetch.json), each aligned pairwise
