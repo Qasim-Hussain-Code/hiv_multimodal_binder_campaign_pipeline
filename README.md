@@ -78,7 +78,7 @@ bash run_all.sh --from 1
 
 12, holdout. The CATNAP and panel-coverage tests I had planned belong to the binder arm and were not run (`results/holdout_not_run.md`). Two smaller tests were run: score against ChEMBL potency, and redocking of the temsavir crystal pose.
 
-13, pre-registration, committed alone as `6641f3d`. 14, analysis. 15, figures. 17, assay ingestion: it refuses at tier A.
+13, pre-registration, committed alone as `d9168e7`. 14, analysis. 15, figures. 17, assay ingestion: it refuses at tier A.
 
 ## Results
 
@@ -149,7 +149,7 @@ Not run. See `results/holdout_not_run.md`.
 
 ## The pre-registration
 
-`results/preregistration.md` was written by `scripts/13_prereg.py` and committed alone as `6641f3d` (`add_preregistration`) before any assay result exists or could exist, since there is no assay. It records the tree commit `88cb501d81b059061ff0246469018e4bd8f16313`, the SHA-256 of 17 input files (all 17 still match the files on disk) and the date 2026-10-01. The tables were written on Windows and carry CRLF line endings, and the hashes are of the files as committed, so a checkout that converts line endings will not reproduce them.
+`results/preregistration.md` was written by `scripts/13_prereg.py` and committed alone as `d9168e7` (`add_preregistration`) before any assay result exists or could exist, since there is no assay. It records the tree commit `4375bca8f9eeecc61f7d7742a3b9df654c7c5649`, the SHA-256 of 17 input files (all 17 still match the files on disk) and the date 2026-10-01. The commit hashes the pre-registration cites changed when the history was rewritten once before this repository was recreated, and `results/preregistration_correction.md` maps the old hashes to the new ones. The tables were written on Windows and carry CRLF line endings, and the hashes are of the files as committed, so a checkout that converts line endings will not reproduce them.
 
 It names 17 compounds to order: the 10 best by median percentile across the four states in the glycosylated arm, excluding any escape-prone in two or more states (median percentiles 7.2 to 25.4), the two anchors, and 5 random null molecules as assay negatives. Support for the ranking is stated as: temsavir IC50 below 1 uM on BG505 (assay validity), at least 3 of 10 ranked compounds below 10 uM on BG505, and at most 1 of 5 nulls below 10 uM. Refutation is 0 of 10, or a hit rate among ranked compounds no higher than among nulls, or ranked compounds that neutralise BG505 and no virus from another clade. The thresholds are arbitrary. A refutation would say nothing about temsavir.
 
