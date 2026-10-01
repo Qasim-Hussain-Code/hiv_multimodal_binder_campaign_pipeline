@@ -216,5 +216,3 @@ References, each confirmed against Crossref on 2026-10-01:
 - O'Boyle NM, Banck M, James CA, et al. Open Babel: an open chemical toolbox. J Cheminform 2011, 3:33. doi:10.1186/1758-2946-3-33
 - Wojdyr M. GEMMI: a library for structural biology. J Open Source Softw 2022, 7:4200. doi:10.21105/joss.04200
 - Cock PJA, Antao T, Chang JT, et al. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics 2009, 25:1422-1423. doi:10.1093/bioinformatics/btp163
-
-RDKit and Meeko are cited by name and version only. No paper for either was verified.
