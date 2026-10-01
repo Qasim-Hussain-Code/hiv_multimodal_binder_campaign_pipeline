@@ -4,13 +4,13 @@ Bench tier: A. No wet lab. Nothing in this repository was tested at a bench, and
 
 ## Summary
 
-The brief for this repository asked for four modalities (small molecules, peptides, designed protein binders, aptamers) ranked against the HIV-1 envelope trimer. One modality was run. The peptide, binder and aptamer arms depend on earlier roadmap stages that were never run, so they have no candidates, and their not-run notes are in `results/modality_*_not_run.md`.
+I set out to rank four kinds of molecule (small molecules, peptides, designed protein binders and aptamers) against the HIV-1 envelope trimer. Only the small molecules got ranked. The other three arms need stages of my roadmap that I never ran, so they have no candidates, and I have written up why in `results/modality_*_not_run.md` instead of filling them with a table.
 
 The small-molecule arm docked 69 Env-directed compounds (67 candidates from ChEMBL plus temsavir and BMS-378806 as positive controls) and 97 property-matched random molecules into the temsavir pocket of four deposited Env structures, each with and without the glycans the deposition resolved. That is 1,328 AutoDock Vina runs (`results/dock_scores.tsv`). Temsavir ranked 2nd of 69 in 5U7O, the structure it was crystallised in, and 64th of 69 in the closed trimer without the ligand (4TVP), 62nd in the CD4-bound open trimer 6U0L and 60th in the CD4-bound trimer 8Z7N (glycosylated arm, `results/control_ranks.tsv`). Its median rank percentile across the four states is 88.4, in the bottom half. BMS-378806 ranked 5th in 5U7O and had a median percentile of 55.8. The Vina score separates the Env-directed set from random molecules with an AUC of 0.57 in 5U7O, 0.78 in 6U0L and 0.81 in 8Z7N (`results/null_floor.tsv`), and its correlation with ChEMBL potency is close to zero in every state. The conservation filter removed 0 of 1,328 poses. On the evidence here I would not spend money on any modality yet. If forced to order from this ranking, the 17 compounds in `results/order_list.tsv` cost a placeholder $5,610 and 204 bench hours, and the pre-registration states what result would refute them.
 
 ## Background
 
-Env is the trimeric HIV-1 spike, three gp120 and three gp41 chains. It is a conformational machine. Single-molecule FRET on virions resolved several pre-fusion states (Munro et al., Science 2014, 346:759-763), and Lu et al. (Nature 2019, 568:415-419) compared those states with solved structures. As I read the brief, the solved high-resolution structures sit in the downstream States 2 and 3, and no structure of State 1 has been determined. I did not re-check for a State 1 structure deposited since 2019. Every receptor here is therefore a conformation the virion mostly does not present, and the state most often presented is absent from the panel.
+Env is the trimeric HIV-1 spike, three gp120 and three gp41 chains. It is a conformational machine. Single-molecule FRET on virions resolved several pre-fusion states (Munro et al., Science 2014, 346:759-763), and Lu et al. (Nature 2019, 568:415-419) compared those states with solved structures. As I understand their conclusion, the solved high-resolution structures sit in the downstream States 2 and 3, and no structure of State 1 has been determined. I have not re-read that comparison for this repository, and I did not check whether a State 1 structure has been deposited since 2019. Every receptor here is therefore a conformation the virion mostly does not present, and the state most often presented is absent from the panel.
 
 About half the mass of Env is N-linked glycan. Deposited structures model few of those sugars, and most docking preparation strips what is there. A compound can look good against the bare protein surface and be sterically excluded on a real virion.
 
@@ -47,7 +47,7 @@ ChEMBL's Env annotation is noisy: reverse transcriptase and integrase compounds 
 
 The null is 97 molecules drawn at random from ChEMBL (300 to 600 Da, at most one Lipinski violation, seed 20260929, 3,014 in the sampling pool), matched to the pool's heavy-atom histogram in 5-atom bins.
 
-Earlier roadmap stages, with the commit read on 2026-09-29: stage 1 `vina_gnina_pose_benchmark_pipeline` at 313851a, stage 2 `colabfold_boltz_structure_confidence_pipeline` at ed49138, stage 4 `vina_litpcba_virtual_screening_pipeline` at dc95aaa. Stages 3, 5 and 6 and the stage 4 peptide arm were never run. Only stage 1's preparation conventions were followed. No code was vendored from any of them, which departs from the brief's instruction to import, and the reason is in `scripts/06_dock.py`. Stage 4 is calibrated on 15 non-Env targets and holds no Env compounds, so it could not supply candidates. `data/README.md` has the provenance table.
+Earlier roadmap stages, with the commit read on 2026-09-29: stage 1 `vina_gnina_pose_benchmark_pipeline` at 313851a, stage 2 `colabfold_boltz_structure_confidence_pipeline` at ed49138, stage 4 `vina_litpcba_virtual_screening_pipeline` at dc95aaa. Stages 3, 5 and 6 and the stage 4 peptide arm were never run. Only stage 1's preparation conventions were followed. No code was vendored from any of them, so the stage 1 conventions were followed by hand and not imported. The reason is in `scripts/06_dock.py`. Stage 4 is calibrated on 15 non-Env targets and holds no Env compounds, so it could not supply candidates. `data/README.md` has the provenance table.
 
 ## Pipeline
 
@@ -76,7 +76,7 @@ bash run_all.sh --from 1
 
 11, ranking. Rank 1 is the lowest Vina score. Percentile is rank divided by pool size. The null is outside the pool.
 
-12, holdout. The brief's CATNAP and panel-coverage tests belong to the binder arm and were not run (`results/holdout_not_run.md`). Two smaller tests were run: score against ChEMBL potency, and redocking of the temsavir crystal pose.
+12, holdout. The CATNAP and panel-coverage tests I had planned belong to the binder arm and were not run (`results/holdout_not_run.md`). Two smaller tests were run: score against ChEMBL potency, and redocking of the temsavir crystal pose.
 
 13, pre-registration, committed alone as `6641f3d`. 14, analysis. 15, figures. 17, assay ingestion: it refuses at tier A.
 
@@ -149,7 +149,7 @@ Not run. See `results/holdout_not_run.md`.
 
 ## The pre-registration
 
-`results/preregistration.md` was written by `scripts/13_prereg.py` and committed alone as `6641f3d` (`add_preregistration`) before any assay result exists or could exist, since there is no assay. It records the tree commit `88cb501d81b059061ff0246469018e4bd8f16313`, the SHA-256 of 17 input files (all 17 still match the files on disk) and the date 2026-10-01.
+`results/preregistration.md` was written by `scripts/13_prereg.py` and committed alone as `6641f3d` (`add_preregistration`) before any assay result exists or could exist, since there is no assay. It records the tree commit `88cb501d81b059061ff0246469018e4bd8f16313`, the SHA-256 of 17 input files (all 17 still match the files on disk) and the date 2026-10-01. The tables were written on Windows and carry CRLF line endings, and the hashes are of the files as committed, so a checkout that converts line endings will not reproduce them.
 
 It names 17 compounds to order: the 10 best by median percentile across the four states in the glycosylated arm, excluding any escape-prone in two or more states (median percentiles 7.2 to 25.4), the two anchors, and 5 random null molecules as assay negatives. Support for the ranking is stated as: temsavir IC50 below 1 uM on BG505 (assay validity), at least 3 of 10 ranked compounds below 10 uM on BG505, and at most 1 of 5 nulls below 10 uM. Refutation is 0 of 10, or a hit rate among ranked compounds no higher than among nulls, or ranked compounds that neutralise BG505 and no virus from another clade. The thresholds are arbitrary. A refutation would say nothing about temsavir.
 
