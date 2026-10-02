@@ -1,6 +1,6 @@
 # Temsavir ranks 2nd of 69 against its own crystal receptor and 45th to 65th against every other HIV-1 Env state tested
 
-Bench tier: A. No wet lab. Nothing in this repository was tested at a bench, and nothing in it is a claim about treating or preventing HIV infection in a person.
+Bench tier: A. No wet lab. Nothing in this repository was tested at a bench, and nothing in it is a claim about treating or preventing HIV infection.
 
 ## Summary
 
